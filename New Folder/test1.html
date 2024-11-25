@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <script>
+        function validateForm() {
+            var fullName = document.forms["regForm"]["fullname"].value;
+            var age = document.forms["regForm"]["age"].value;
+            var dob = document.forms["regForm"]["dob"].value;
+            var referDoc = document.forms["regForm"]["referdoc"].value;
+            var testType = document.forms["regForm"]["testtype"].value;
+            var gender = document.querySelector('input[name="gen"]:checked');
+
+            if (fullName == "" || age == "" || dob == "" || referDoc == "" || testType == "" || gender == null) {
+                alert("All fields must be filled out");
+                return false;
+            }
+        }
+    </script>
+</head>
+<body>
+    <form name="regForm" action="C:\Users\prash\OneDrive\Desktop\fswd\New folder\5.html" onsubmit="return validateForm()">
+        <center>
+            <img src="C:\Users\prash\OneDrive\Desktop\fswd\New folder\2.jpg" height="100" width="150">
+            <h2>Sai Durga Pathological Laboratory</h2>
+            <table>
+                <tr><td>FullName</td><td><input type="text" name="fullname" required></td></tr>
+                <tr><td>Age</td><td><input type="text" name="age" required></td></tr>
+                <tr><td>DOB</td><td><input type="Date" name="dob" required></td></tr>
+                <tr><td>Refer DOC</td><td><input type="text" name="referdoc" required></td></tr>
+                <tr><td>Test Type</td><td><input type="text" name="testtype" required></td></tr>
+                <tr><td>Gender</td><td>Male<input type="radio" name="gen" value="male" required>
+                                       Female<input type="radio" name="gen" value="female" required></td></tr>
+                <tr><td><input type="submit" value="submit"></td></tr>
+            </table>
+        </center>
+    </form>
+</body>
+</html>
